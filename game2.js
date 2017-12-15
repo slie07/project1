@@ -16,6 +16,8 @@ $(function() {
     var restart_div = $('#restart_div');
     var restart_btn = $('#restart');
     var score = $('#score');
+    var audio = $('#audio');
+    var audio2 = $('#audio2');
 
     //saving some initial setup
     var container_left = parseInt(container.css('left'));
@@ -165,6 +167,10 @@ $(function() {
         cancelAnimationFrame(move_down);
         restart_div.slideDown();
         restart_btn.focus();
+        console.log(audio[0]);
+        audio[0].pause();
+        console.log(audio2[0]);
+        audio2[0].play();
     }
 
     /* ------------------------------GAME CODE ENDS HERE------------------------------------------- */
