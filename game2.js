@@ -4,10 +4,8 @@ $(function() {
 
     var anim_id;
 
-
     //saving dom objects to variables
     var container = $('#container');
-    var car_4 = $('#car_4');
     var car = $('#car');
     var car_1 = $('#car_1');
     var car_2 = $('#car_2');
@@ -25,9 +23,6 @@ $(function() {
     var container_height = parseInt(container.height());
     var car_width = parseInt(car.width());
     var car_height = parseInt(car.height());
-    var car_4_width = parseInt(car_4.width());
-    var car_4_height = parseInt(car_4.height());
-
 
     //some other declarations
     var game_over = false;
@@ -41,44 +36,22 @@ $(function() {
     var move_left = false;
     var move_up = false;
     var move_down = false;
-    var move_right1 = false;
-    var move_left1 = false;
-    var move_up1 = false;
-    var move_down1 = false;
 
 
-
- // /* Movement on player2 */ using requestAnimationFrame function to make a smooth transition 
+    // /* Movement on yoshi */ using requestAnimationFrame function to make a smooth transition 
 
 
     $(document).on('keydown', function(e) {
         if (game_over === false) {
             var key = e.keyCode;
-            if (key === 65 && move_left1 === false) {
-                move_left = requestAnimationFrame(left1);
-                // left1();
-            } else if (key === 68 && move_right1 === false) {
-                move_right = requestAnimationFrame(right1);
-                // right1();
-            } else if (key === 87 && move_up1 === false) {
-                move_up = requestAnimationFrame(up1);
-                // up1();
-            } else if (key === 83 && move_down1 === false) {
-                move_down = requestAnimationFrame(down1);
-                // down1();
-            }
-              else if (key === 37 && move_left === false) {
+            if (key === 37 && move_left === false) {
                 move_left = requestAnimationFrame(left);
-                // left();
             } else if (key === 39 && move_right === false) {
                 move_right = requestAnimationFrame(right);
-                // right();
             } else if (key === 38 && move_up === false) {
                 move_up = requestAnimationFrame(up);
-                // up();
             } else if (key === 40 && move_down === false) {
                 move_down = requestAnimationFrame(down);
-                // down();
             }
         }
     });
@@ -86,21 +59,7 @@ $(function() {
     $(document).on('keyup', function(e) {
         if (game_over === false) {
             var key = e.keyCode;
-            if (key === 65) {
-                cancelAnimationFrame(move_left);
-                move_left = false;
-            } else if (key === 68) {
-                cancelAnimationFrame(move_right);
-                move_right = false;
-            } else if (key === 87) {
-                cancelAnimationFrame(move_up);
-                move_up = false;
-            } else if (key === 83) {
-                cancelAnimationFrame(move_down);
-                move_down = false;
-            }
-
-              else if (key === 37) {
+            if (key === 37) {
                 cancelAnimationFrame(move_left);
                 move_left = false;
             } else if (key === 39) {
@@ -115,34 +74,6 @@ $(function() {
             }
         }
     });
-    function left1() {
-        if (game_over === false && parseInt(car_4.css('left')) > 0) {
-            car_4.css('left', parseInt(car_4.css('left')) - 5);
-            requestAnimationFrame(left1);
-        }
-    }
-    // defining what function right is 
-    function right1() {
-        if (game_over === false && parseInt(car_4.css('left')) < container_width - car_width) {
-            car_4.css('left', parseInt(car_4.css('left')) + 5);
-            move_right = requestAnimationFrame(right1);
-        }
-    }
-     // defining what function up is 
-    function up1() {
-        if (game_over === false && parseInt(car_4.css('top')) > 0) {
-            car_4.css('top', parseInt(car_4.css('top')) - 3);
-            move_up = requestAnimationFrame(up1);
-        }
-    }
-     // defining what function down is 
-    function down1() {
-        if (game_over === false && parseInt(car_4.css('top')) < container_height - car_4_height) {
-            car_4.css('top', parseInt(car_4.css('top')) + 3);
-            move_down = requestAnimationFrame(down1);
-        }
-    }
-
     // defining what function left is 
 
     function left() {
@@ -177,8 +108,7 @@ $(function() {
     anim_id = requestAnimationFrame(repeat);
 
     function repeat() {
-        if (collision(car, car_1) || collision(car, car_2) || collision(car, car_3) || collision(car_4, car_1) || collision(car_4, car_2) || 
-            collision(car_4, car_3)) {
+        if (collision(car, car_1) || collision(car, car_2) || collision(car, car_3)) {
             stop_the_game();
             return;
         }
@@ -264,4 +194,3 @@ $('html, body').css({
 
 
 });
-
