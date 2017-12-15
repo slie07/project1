@@ -7,5 +7,5 @@ https://trello.com/b/swN5hj90/untitled-board
 
 
 Technologies Used:
-HTML,CSS,Jquery.
+HTML | CSS | Jquery
 
