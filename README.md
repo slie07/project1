@@ -21,3 +21,8 @@ Strech Goal:
 2 individual charachters could select different character.
 3 store indvidual player score.
 4 if either player died 1st the character will dissappear and the other player could continue playing.
+
+
+landing page wireframe :
+https://github.com/slie07/project1/blob/master/%20landig%20page%20at%2011.59.03%20AM.png
+
