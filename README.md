@@ -1,4 +1,6 @@
-# project1
+Go Yoshi GO
+Project#1
+
 
 Go Yoshi Go
 
