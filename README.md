@@ -3,6 +3,8 @@
 Go Yoshi Go
 
 User Stories:
+
+
 To make a race game. The object of this game is for the user to avoid an object. When the main object hit another object the game end.
 
 Created 2 players option into the game.
@@ -25,4 +27,7 @@ Strech Goal:
 
 landing page wireframe :
 https://github.com/slie07/project1/blob/master/%20landig%20page%20at%2011.59.03%20AM.png
+
+actual Game Wireframe 
+https://github.com/slie07/project1/blob/master/Screen%20Shot%202017-12-16%20at%207.45.44%20PM.png
 
