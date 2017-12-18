@@ -11,9 +11,13 @@ To make a race game. The object of this game is for the user to avoid an object.
 
 Created 2 players option into the game.
 
-
+Trello Link:
 
 https://trello.com/b/swN5hj90/untitled-board
+
+
+Landing Page Link:
+https://slie07.github.io/project1/
 
 
 
